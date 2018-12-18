@@ -3,8 +3,8 @@
 	height: 30px;
 	background: #dadada;
 	font-size: 15px;
-	line-height: 35px;
-	color: black;
+	line-height: 30px;
+	color: #000;
 	text-align: center;
 	opacity: 0.3;
 
@@ -26,6 +26,6 @@
 		width: calc(15px * 1.5);
 		height: calc(30px * 1.5);
 		font-size: calc(15px * 1.5);
-		line-height: calc(35px * 1.5);
+		line-height: calc(30px * 1.5);
 	}
 }

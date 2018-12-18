@@ -1,43 +1,60 @@
 .w-ext-storybook-menu-item {
-	color: black;
+	color: #000;
+	font-size: 15px;
+	line-height: 1;
+	overflow: hidden;
 	padding-left: 10px;
 	padding-right: 10px;
 
 	& .w-ext-storybook-menu-item__caption {
-		font-size: 15px;
 		font-weight: bold;
-	}
-
-	& .w-ext-storybook-menu-item__options {
-		margin: 5px 5px 5px 10px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding: 5px;
 	}
 
 	& .w-ext-storybook-menu-item__option {
-		font-size: 13px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		padding: 5px;
+		margin-left: 10px;
 
 		&._active {
 			background: #bdbdbd;
+		}
+
+		&._selected {
+			height: 25px;
+			border: 1px solid #8c8c8c;
+			box-sizing: border-box;
+			line-height: 13px;
+			padding-left: 4px;
 		}
 	}
 }
 
 .zb-full-hd {
 	& .w-ext-storybook-menu-item {
+		font-size: calc(15px * 1.5);
 		padding-left: calc(10px * 1.5);
 		padding-right: calc(10px * 1.5);
 
 		& .w-ext-storybook-menu-item__caption {
-			font-size: calc(15px * 1.5);
-		}
-
-		& .w-ext-storybook-menu-item__options {
-			margin: calc(5px * 1.5) calc(5px * 1.5) calc(5px * 1.5) calc(10px * 1.5);
+			padding: calc(5px * 1.5);
 		}
 
 		& .w-ext-storybook-menu-item__option {
-			font-size: calc(13px * 1.5);
 			padding: calc(5px * 1.5);
+			margin-left: calc(10px * 1.5);
+
+			&._selected {
+				height: calc(25px * 1.5);
+				border-width: calc(1px * 1.5);
+				line-height: calc(13px * 1.5);
+				padding-left: calc(4px * 1.5);
+			}
 		}
 	}
 }

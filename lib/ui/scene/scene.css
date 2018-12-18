@@ -4,12 +4,9 @@
 		float: left;
 	}
 
-	& .s-ext-storybook__area {
+	& .w-ext-storybook-area {
 		width: 930px;
 		height: 100%;
-		background: white;
-		overflow: hidden;
-		position: relative;
 	}
 
 	& .w-ext-storybook-spinner {
@@ -23,6 +20,7 @@
 
 	& .w-ext-storybook-back-button {
 		position: absolute;
+		top: 5px;
 		left: 5px;
 	}
 
@@ -38,7 +36,7 @@
 			width: 25px;
 		}
 
-		& .s-ext-storybook__area {
+		& .w-ext-storybook-area {
 			width: 1255px;
 		}
 
@@ -58,7 +56,7 @@
 			width: calc(350px * 1.5);
 		}
 
-		& .s-ext-storybook__area {
+		& .w-ext-storybook-area {
 			width: calc(930px * 1.5);
 		}
 
@@ -68,6 +66,7 @@
 		}
 
 		& .w-ext-storybook-back-button {
+			top: calc(5px * 1.5);
 			left: calc(5px * 1.5);
 		}
 
@@ -81,7 +80,7 @@
 				width: calc(25px * 1.5);
 			}
 
-			& .s-ext-storybook__area {
+			& .w-ext-storybook-area {
 				width: calc(1255px * 1.5);
 			}
 

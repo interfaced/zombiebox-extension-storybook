@@ -1,7 +1,7 @@
 {
   "name": "zombiebox-extension-storybook",
   "description": "ZombieBox extension for interactive UI development",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
   "contributors": [
@@ -23,9 +23,10 @@
     "lint": "eslint index.js lib"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-interfaced": "^0.6.2",
-    "eslint-plugin-goog": "^0.4.0",
-    "eslint-plugin-interfaced": "^0.5.0"
+    "eslint": "^5.8.0",
+    "eslint-config-interfaced": "^1.4.1",
+    "eslint-plugin-goog": "^1.0.0",
+    "eslint-plugin-interfaced": "^1.5.0",
+    "eslint-plugin-node": "^7.0.1"
   }
 }

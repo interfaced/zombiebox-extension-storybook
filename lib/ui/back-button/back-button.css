@@ -1,6 +1,7 @@
 .w-ext-storybook-back-button {
 	font-size: 25px;
-	color: black;
+	line-height: 1;
+	color: #000;
 	opacity: 0.3;
 
 	&._active {

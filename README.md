@@ -7,10 +7,11 @@
 First, you need to create a stories set for your widget.
 
 We recommend to place stories in a widget directory, e.g. `app/my/widgets/button/story/button.js`. 
-File must provide a factory function that returns stories set:
+File must provide a factory function that returns a stories set:
 
 ```javascript
 goog.provide('my.widgets.story.Button');
+goog.require('my.widgets.Button');
 goog.require('zb.storybook.Helper');
 goog.require('zb.storybook.StoriesSet');
 
@@ -53,13 +54,20 @@ my.Application = class extends my.BaseApplication {
 	onReady() {
 		zb.storybook.init(this, {
 			'my.widgets.Button': my.widgets.story.Button
-		}, 'grey');
+		}, {
+		    background: 'grey'
+		});
 	}
 }
 ```
 
-Third param is a background of storybook area where widgets will be placed. 
-It's optional and can be omitted, in this case area will be white.
+Third argument is the next options:
+
+* `background` (optional) - a background of the area where widgets will be placed. If omitted the area will be white.
+
+* `defaultSet` (optional) - title of the set that should be activated when storybook is being opened first time.
+
+* `defaultStory` (optional) - title of the story that should be activated from the set specified in `defaultSet`.
 
 After storybook is initialized you can open/close it by calling `zb.storybook.open` and `zb.storybook.close`.
 
@@ -95,19 +103,24 @@ Change a color of the area.
 
 Reset a color of the area to the default one, which was specified (or not) during initialization.
 
+#### showLayer/closeLayer/closeAllLayers
+
+Show or close a specific or all layers.
+
 ## Hooks
 
 There are four available hooks:
 
-* `zb.storybook.BEFORE_SETUP`;
-* `zb.storybook.AFTER_SETUP`;
-* `zb.storybook.BEFORE_TEARDOWN`;
-* `zb.storybook.AFTER_TEARDOWN`.
+* `zb.storybook.BEFORE_SETUP`
+* `zb.storybook.AFTER_SETUP`
+* `zb.storybook.BEFORE_TEARDOWN`
+* `zb.storybook.AFTER_TEARDOWN`
 
-Each of them can return a promise. With this hooks you can separate a duplicate code and leave only story-specific actions, e.g.:
+Each of them can return a promise. With these hooks you can separate a duplicate code and leave only story-specific actions, e.g.:
 
 ```javascript
 goog.provide('my.widgets.story.Button');
+goog.require('my.widgets.Button');
 goog.require('zb.storybook.AFTER_TEARDOWN');
 goog.require('zb.storybook.BEFORE_SETUP');
 goog.require('zb.storybook.Helper');
@@ -121,20 +134,19 @@ my.widgets.story.Button = (helper) => {
 	const button = new my.widgets.Button();
 
 	return {
-		[zb.storybook.BEFORE_SETUP]: () => {
+		[zb.storybook.BEFORE_SETUP]() {
 			helper.placeWidget(button);
 			helper.centerWidget(button);
 		},
 
-		[zb.storybook.AFTER_TEARDOWN]: () => {
+		[zb.storybook.AFTER_TEARDOWN]() {
 			helper.removeWidget(button);
 		},
-		
+
 		'default': {
-			setup() {},
-			teardown() {}
+			setup() {}
 		},
-		
+
 		'activated': {
 			setup() {
 				button.setActivated(true);
