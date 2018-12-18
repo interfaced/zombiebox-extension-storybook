@@ -1,5 +1,6 @@
 .w-ext-storybook-menu {
 	height: 720px;
+	font-family: Helvetica, Arial, sans-serif;
 	background: #dadada;
 
 	& .w-ext-storybook-menu__viewport {

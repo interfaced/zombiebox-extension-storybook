@@ -1,9 +1,12 @@
 {
   "name": "zombiebox-extension-storybook",
   "description": "ZombieBox extension for interactive UI development",
-  "version": "0.0.1",
-  "author": "Kirill Dronkin (http://dronkin.ru)",
+  "version": "0.1.0-beta.1",
   "license": "MIT",
+  "author": "Interfaced (http://interfaced.tv)",
+  "contributors": [
+    "Kirill Dronkin <kirilldronkin@gmail.com>"
+  ],
   "files": [
     "LICENSE",
     "README.md",
@@ -15,5 +18,14 @@
     "zombiebox",
     "zombiebox-extension",
     "storybook"
-  ]
+  ],
+  "scripts": {
+    "lint": "eslint index.js lib"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-interfaced": "^0.6.2",
+    "eslint-plugin-goog": "^0.4.0",
+    "eslint-plugin-interfaced": "^0.5.0"
+  }
 }
