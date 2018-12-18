@@ -1,0 +1,19 @@
+{
+  "name": "zombiebox-extension-storybook",
+  "description": "ZombieBox extension for interactive UI development",
+  "version": "0.0.1",
+  "author": "Kirill Dronkin (http://dronkin.ru)",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "index.js",
+    "lib"
+  ],
+  "keywords": [
+    "zombiebox",
+    "zombiebox-extension",
+    "storybook"
+  ]
+}

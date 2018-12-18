@@ -1,0 +1,15 @@
+.w-ext-storybook-back-button {
+	font-size: 25px;
+	color: black;
+	opacity: 0.3;
+
+	&._active {
+		opacity: 1;
+	}
+}
+
+.zb-full-hd {
+	& .w-ext-storybook-back-button {
+		font-size: calc(25px * 1.5);
+	}
+}

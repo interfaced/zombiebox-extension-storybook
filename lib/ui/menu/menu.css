@@ -1,0 +1,31 @@
+.w-ext-storybook-menu {
+	height: 720px;
+	background: #dadada;
+
+	& .w-ext-storybook-menu__viewport {
+		height: calc(720px - 50px);
+		overflow: hidden;
+		position: relative;
+		margin-top: 35px;
+	}
+
+	& .w-ext-storybook-menu__slider {
+		width: 100%;
+		position: absolute;
+	}
+
+	&._scrolling {
+		pointer-events: none;
+	}
+}
+
+.zb-full-hd {
+	& .w-ext-storybook-menu {
+		height: calc(720px * 1.5);
+
+		& .w-ext-storybook-menu__viewport {
+			height: calc((720px - 50px) * 1.5);
+			margin-top: calc(35px * 1.5);
+		}
+	}
+}
