@@ -1,5 +1,9 @@
 # Change log
 
+## 0.1.1 (release date: 25.12.2018)
+
+* More accurate markup for FHD resolution
+
 ## 0.1.0 (release date: 18.12.2018)
 
 * Added scroll bar to menu

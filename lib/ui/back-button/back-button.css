@@ -1,5 +1,5 @@
 .w-ext-storybook-back-button {
-	font-size: 25px;
+	font-size: 26px;
 	line-height: 1;
 	color: #000;
 	opacity: 0.3;
@@ -11,6 +11,6 @@
 
 .zb-full-hd {
 	& .w-ext-storybook-back-button {
-		font-size: calc(25px * 1.5);
+		font-size: calc(26px * 1.5);
 	}
 }

@@ -1,9 +1,9 @@
 .w-ext-storybook-minimize-button {
-	width: 15px;
+	width: 16px;
 	height: 30px;
-	background: #dadada;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 30px;
+	background: #dadada;
 	color: #000;
 	text-align: center;
 	opacity: 0.3;
@@ -23,9 +23,9 @@
 
 .zb-full-hd {
 	& .w-ext-storybook-minimize-button {
-		width: calc(15px * 1.5);
+		width: calc(16px * 1.5);
 		height: calc(30px * 1.5);
-		font-size: calc(15px * 1.5);
+		font-size: calc(16px * 1.5);
 		line-height: calc(30px * 1.5);
 	}
 }

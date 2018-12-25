@@ -1,6 +1,6 @@
 # zombiebox-extension-storybook
 
-[ZombieBox](https://zombiebox.tv) extension for interactive UI development.
+[ZombieBox](https://zombiebox.tv) extension for interactive UI development. Inspired by [Storybook](https://github.com/storybooks/storybook) project.
 
 ## Usage
 
@@ -55,7 +55,7 @@ my.Application = class extends my.BaseApplication {
 		zb.storybook.init(this, {
 			'my.widgets.Button': my.widgets.story.Button
 		}, {
-		    background: 'grey'
+			background: 'grey'
 		});
 	}
 }
@@ -151,9 +151,9 @@ my.widgets.story.Button = (helper) => {
 			setup() {
 				button.setActivated(true);
 			},
-            teardown() {
-                button.setActivated(false);
-            }
+			teardown() {
+				button.setActivated(false);
+			}
 		}
 	};
 };

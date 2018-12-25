@@ -1,9 +1,10 @@
 {
   "name": "zombiebox-extension-storybook",
   "description": "ZombieBox extension for interactive UI development",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
+  "homepage": "https://github.com/interfaced/zombiebox-extension-storybook",
   "contributors": [
     "Kirill Dronkin <kirilldronkin@gmail.com>"
   ],

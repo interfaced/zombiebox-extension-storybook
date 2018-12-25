@@ -1,24 +1,25 @@
 .w-ext-storybook-menu-item {
 	color: #000;
-	font-size: 15px;
 	line-height: 1;
 	overflow: hidden;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 8px;
+	padding-right: 12px;
 
 	& .w-ext-storybook-menu-item__caption {
+		font-size: 16px;
 		font-weight: bold;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		padding: 5px;
+		padding: 6px 4px 4px 4px;
 	}
 
 	& .w-ext-storybook-menu-item__option {
+		font-size: 14px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		padding: 5px;
+		padding: 6px;
 		margin-left: 10px;
 
 		&._active {
@@ -26,10 +27,10 @@
 		}
 
 		&._selected {
-			height: 25px;
-			border: 1px solid #8c8c8c;
+			height: 26px;
+			border: 2px solid #8c8c8c;
 			box-sizing: border-box;
-			line-height: 13px;
+			line-height: 10px;
 			padding-left: 4px;
 		}
 	}
@@ -37,22 +38,23 @@
 
 .zb-full-hd {
 	& .w-ext-storybook-menu-item {
-		font-size: calc(15px * 1.5);
-		padding-left: calc(10px * 1.5);
-		padding-right: calc(10px * 1.5);
+		padding-left: calc(8px * 1.5);
+		padding-right: calc(12px * 1.5);
 
 		& .w-ext-storybook-menu-item__caption {
-			padding: calc(5px * 1.5);
+			font-size: calc(16px * 1.5);
+			padding: calc(6px * 1.5) calc(4px * 1.5) calc(4px * 1.5) calc(4px * 1.5);
 		}
 
 		& .w-ext-storybook-menu-item__option {
-			padding: calc(5px * 1.5);
+			font-size: calc(14px * 1.5);
+			padding: calc(6px * 1.5);
 			margin-left: calc(10px * 1.5);
 
 			&._selected {
-				height: calc(25px * 1.5);
-				border-width: calc(1px * 1.5);
-				line-height: calc(13px * 1.5);
+				height: calc(26px * 1.5);
+				border-width: calc(2px * 1.5);
+				line-height: calc(10px * 1.5);
 				padding-left: calc(4px * 1.5);
 			}
 		}
