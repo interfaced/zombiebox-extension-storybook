@@ -1,5 +1,13 @@
 # Change log
 
+## 0.2.0 (release date: 22.01.2019)
+
+* Added processing of PAGE_UP/PAGE_DOWN keys
+* Added new component Navigator to ease navigation when menu is hidden
+* Added selection cancelling when mouse leaves menu to exclude false positive selections
+* Fixed restoring of the previous layer on storybook close
+* Fixed focusing of the previous story in a set instead of the closest one
+
 ## 0.1.1 (release date: 25.12.2018)
 
 * More accurate markup for FHD resolution

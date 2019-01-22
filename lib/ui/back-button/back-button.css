@@ -4,6 +4,10 @@
 	color: #000;
 	opacity: 0.3;
 
+	&::before {
+		content: '❮';
+	}
+
 	&._active {
 		opacity: 1;
 	}

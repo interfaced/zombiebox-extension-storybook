@@ -31,6 +31,13 @@
 		z-index: 999;
 	}
 
+	& .w-ext-storybook-navigator {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 999;
+	}
+
 	&._minimized {
 		& .w-ext-storybook-menu {
 			width: 26px;
@@ -73,6 +80,11 @@
 		& .w-ext-storybook-minimize-button {
 			top: calc((720px / 2 - 16px) * 1.5);
 			left: calc(350px * 1.5);
+		}
+
+		& .w-ext-storybook-navigator {
+			top: calc(10px * 1.5);
+			right: calc(10px * 1.5);
 		}
 
 		&._minimized {

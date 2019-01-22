@@ -9,11 +9,11 @@
 	opacity: 0.3;
 
 	&._leftward::before {
-		content: "❮";
+		content: '❮';
 	}
 
 	&._rightward::before {
-		content: "❯";
+		content: '❯';
 	}
 
 	&._active {
