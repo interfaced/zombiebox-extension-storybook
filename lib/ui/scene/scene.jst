@@ -1,8 +1,13 @@
-{{$ zb.storybook.templates.scene }}
+{{+ import BackButton from "storybook/ui/back-button/back-button"; }}
+{{+ import Menu from "storybook/ui/menu/menu"; }}
+{{+ import MinimizeButton from "storybook/ui/minimize-button/minimize-button"; }}
+{{+ import Navigator from "storybook/ui/navigator/navigator"; }}
+{{+ import Spinner from "storybook/ui/spinner/spinner"; }}
+{{+ import Area from "storybook/ui/area/area"; }}
 
-{{% zb.storybook.ui.Menu, {}, menu }}
-{{% zb.storybook.ui.BackButton, {}, backButton }}
-{{% zb.storybook.ui.MinimizeButton, {}, minimizeButton }}
-{{% zb.storybook.ui.Navigator, {}, navigator }}
-{{% zb.storybook.ui.Spinner, {}, spinner }}
-{{% zb.storybook.ui.Area, {}, area }}
+{{% Menu, {}, menu }}
+{{% BackButton, {}, backButton }}
+{{% MinimizeButton, {}, minimizeButton }}
+{{% Navigator, {}, navigator }}
+{{% Spinner, {}, spinner }}
+{{% Area, {}, area }}

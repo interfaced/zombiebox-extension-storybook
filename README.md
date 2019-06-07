@@ -7,20 +7,19 @@
 First, you need to create a stories set for your widget.
 
 We recommend to place stories in a widget directory, e.g. `app/my/widgets/button/story/button.js`. 
-File must provide a factory function that returns a stories set:
+File must export a factory function that returns a stories set:
 
 ```javascript
-goog.provide('my.widgets.story.Button');
-goog.require('my.widgets.Button');
-goog.require('zb.storybook.Helper');
-goog.require('zb.storybook.StoriesSet');
+import Helper from 'storybook/helper';
+import StoriesSet from 'storybook/types';
+import Button from '../button';
 
 /**
- * @param {zb.storybook.Helper} helper
- * @return {zb.storybook.StoriesSet}
+ * @param {Helper} helper
+ * @return {StoriesSet}
  */
-my.widgets.story.Button = (helper) => {
-	const button = new my.widgets.Button();
+export default (helper) => {
+	const button = new Button();
 
 	return {
 		'default': {
@@ -41,19 +40,18 @@ Both hooks can return a promise, `teardown` may be omitted.
 Then, initialize storybook with the brand new stories. The best place to do it is hook `onReady` of an application class:
 
 ```javascript
-goog.provide('my.Application');
-goog.require('my.BaseApplication');
-goog.require('my.widgets.story.Button');
-goog.require('zb.storybook');
+import {init as initStorybook} from 'storybook/storybook';
+import BaseApplication from 'generated/zb/base-application';
+import ButtonStory from 'app/my/widgets/button/story/button';
 
 /**
  */
-my.Application = class extends my.BaseApplication {
+export default class Application extends BaseApplication {
 	/**
 	 */
 	onReady() {
-		zb.storybook.init(this, {
-			'my.widgets.Button': my.widgets.story.Button
+		initStorybook(this, {
+			Button: ButtonStory
 		}, {
 			background: 'grey'
 		});
@@ -68,8 +66,6 @@ Third argument is the next options:
 * `defaultSet` (optional) - title of the set that should be activated when storybook is being opened first time.
 
 * `defaultStory` (optional) - title of the story that should be activated from the set specified in `defaultSet`.
-
-After storybook is initialized you can open/close it by calling `zb.storybook.open` and `zb.storybook.close`.
 
 ## Helper API
 
@@ -111,35 +107,33 @@ Show or close a specific or all layers.
 
 There are four available hooks:
 
-* `zb.storybook.BEFORE_SETUP`
-* `zb.storybook.AFTER_SETUP`
-* `zb.storybook.BEFORE_TEARDOWN`
-* `zb.storybook.AFTER_TEARDOWN`
+* `BEFORE_SETUP`
+* `AFTER_SETUP`
+* `BEFORE_TEARDOWN`
+* `AFTER_TEARDOWN`
 
 Each of them can return a promise. With these hooks you can separate a duplicate code and leave only story-specific actions, e.g.:
 
 ```javascript
-goog.provide('my.widgets.story.Button');
-goog.require('my.widgets.Button');
-goog.require('zb.storybook.AFTER_TEARDOWN');
-goog.require('zb.storybook.BEFORE_SETUP');
-goog.require('zb.storybook.Helper');
-goog.require('zb.storybook.StoriesSet');
+import Helper from 'storybook/helper';
+import StoriesSet from 'storybook/types';
+import {AFTER_TEARDOWN, BEFORE_SETUP} from 'storybook/symbols';
+import Button from '../button';
 
 /**
- * @param {zb.storybook.Helper} helper
- * @return {zb.storybook.StoriesSet}
+ * @param {Helper} helper
+ * @return {StoriesSet}
  */
-my.widgets.story.Button = (helper) => {
-	const button = new my.widgets.Button();
+export default (helper) => {
+	const button = new Button();
 
 	return {
-		[zb.storybook.BEFORE_SETUP]() {
+		[BEFORE_SETUP]() {
 			helper.placeWidget(button);
 			helper.centerWidget(button);
 		},
 
-		[zb.storybook.AFTER_TEARDOWN]() {
+		[AFTER_TEARDOWN]() {
 			helper.removeWidget(button);
 		},
 

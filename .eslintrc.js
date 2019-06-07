@@ -1,28 +1,37 @@
-const path = require('path');
-const {nsUtils} = require('eslint-plugin-goog');
+const {join, dirname} = require('path');
+
+function resolveModulePath(packageName) {
+	const packageInfoPath = require.resolve(`${packageName}/package.json`);
+
+	return join(dirname(packageInfoPath), require(packageInfoPath).module);
+}
 
 module.exports = {
 	extends: 'interfaced',
 	overrides: [
-		Object.assign(
-			{
-				files: 'lib/**',
-			},
-			require('eslint-config-interfaced/overrides/zombiebox')
-		),
 		{
-			files: 'lib/**',
+			...require('eslint-config-interfaced/overrides/esm'),
+			files: ['lib/**/*.js'],
 			settings: {
-				knownNamespaces: [
-					...nsUtils.findByPattern(path.join(__dirname , 'lib', '**', '*.js'))
-				]
+				'import/resolver': {
+					alias: [
+						['zb', resolveModulePath('zombiebox')],
+						['cutejs', resolveModulePath('zombiebox-extension-cutejs')]
+					]
+				}
 			}
 		},
-		Object.assign(
-			{
-				files: 'index.js',
-			},
-			require('eslint-config-interfaced/overrides/node')
-		),
+		{
+			files: ['lib/**/*.js'],
+			rules: {
+				'import/extensions': {jst: 'always'},
+				'import/no-unresolved': ['error', {ignore: ['^generated/']}]
+			}
+		},
+		{
+			...require('eslint-config-interfaced/overrides/node'),
+			files: ['index.js']
+		}
 	]
 };
+

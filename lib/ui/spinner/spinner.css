@@ -19,10 +19,9 @@
 	animation: spin 1.2s linear infinite;
 }
 
-.zb-full-hd {
-	& .w-ext-storybook-spinner {
-		width: calc(60px * 1.5);
-		height: calc(60px * 1.5);
-		border-width: calc(4px * 1.5);
-	}
+.zb-full-hd  .w-ext-storybook-spinner {
+	width: calc(60px * 1.5);
+	height: calc(60px * 1.5);
+	border-width: calc(4px * 1.5);
 }
+

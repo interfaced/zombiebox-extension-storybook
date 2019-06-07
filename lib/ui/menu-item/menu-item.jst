@@ -1,11 +1,12 @@
-{{$ zb.storybook.templates.menuItem }}
+{{+ import InlineWidget from "cutejs/widgets/inline-widget"; }}
+
 {{* this.caption string }}
 {{* this.options Array<string> }}
 
 <div class="w-ext-storybook-menu-item">
 	<div class="w-ext-storybook-menu-item__caption">{{= this.caption }}</div>
 	{{ this.options.forEach((option) => { }}
-		<div class="w-ext-storybook-menu-item__option" data-component="{{% zb.widgets.InlineWidget, {}, options[] }}">
+		<div class="w-ext-storybook-menu-item__option" data-component="{{% InlineWidget, {}, options[] }}">
 			{{= option }}
 		</div>
 	{{ }); }}

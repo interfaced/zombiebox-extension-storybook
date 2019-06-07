@@ -3,18 +3,16 @@
 	line-height: 1;
 	color: #000;
 	opacity: 0.3;
-
-	&::before {
-		content: '❮';
-	}
-
-	&._active {
-		opacity: 1;
-	}
 }
 
-.zb-full-hd {
-	& .w-ext-storybook-back-button {
-		font-size: calc(26px * 1.5);
-	}
+.w-ext-storybook-back-button::before {
+	content: '❮';
+}
+
+.w-ext-storybook-back-button._active {
+	opacity: 1;
+}
+
+.zb-full-hd .w-ext-storybook-back-button {
+	font-size: calc(26px * 1.5);
 }

@@ -4,59 +4,60 @@
 	overflow: hidden;
 	padding-left: 8px;
 	padding-right: 12px;
-
-	& .w-ext-storybook-menu-item__caption {
-		font-size: 16px;
-		font-weight: bold;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		padding: 6px 4px 4px 4px;
-	}
-
-	& .w-ext-storybook-menu-item__option {
-		font-size: 14px;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		padding: 6px;
-		margin-left: 10px;
-
-		&._active {
-			background: #bdbdbd;
-		}
-
-		&._selected {
-			height: 26px;
-			border: 2px solid #8c8c8c;
-			box-sizing: border-box;
-			line-height: 10px;
-			padding-left: 4px;
-		}
-	}
 }
 
-.zb-full-hd {
-	& .w-ext-storybook-menu-item {
-		padding-left: calc(8px * 1.5);
-		padding-right: calc(12px * 1.5);
-
-		& .w-ext-storybook-menu-item__caption {
-			font-size: calc(16px * 1.5);
-			padding: calc(6px * 1.5) calc(4px * 1.5) calc(4px * 1.5) calc(4px * 1.5);
-		}
-
-		& .w-ext-storybook-menu-item__option {
-			font-size: calc(14px * 1.5);
-			padding: calc(6px * 1.5);
-			margin-left: calc(10px * 1.5);
-
-			&._selected {
-				height: calc(26px * 1.5);
-				border-width: calc(2px * 1.5);
-				line-height: calc(10px * 1.5);
-				padding-left: calc(4px * 1.5);
-			}
-		}
-	}
+.w-ext-storybook-menu-item .w-ext-storybook-menu-item__caption {
+	font-size: 16px;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 6px 4px 4px 4px;
 }
+
+.w-ext-storybook-menu-item .w-ext-storybook-menu-item__option {
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 6px;
+	margin-left: 10px;
+}
+
+.w-ext-storybook-menu-item .w-ext-storybook-menu-item__option._active {
+	background: #bdbdbd;
+}
+
+.w-ext-storybook-menu-item .w-ext-storybook-menu-item__option._selected {
+	height: 26px;
+	border: 2px solid #8c8c8c;
+	box-sizing: border-box;
+	line-height: 10px;
+	padding-left: 4px;
+}
+
+.zb-full-hd .w-ext-storybook-menu-item {
+	padding-left: calc(8px * 1.5);
+	padding-right: calc(12px * 1.5);
+}
+
+.zb-full-hd .w-ext-storybook-menu-item .w-ext-storybook-menu-item__caption {
+	font-size: calc(16px * 1.5);
+	padding: calc(6px * 1.5) calc(4px * 1.5) calc(4px * 1.5) calc(4px * 1.5);
+}
+
+.zb-full-hd .w-ext-storybook-menu-item .w-ext-storybook-menu-item__option {
+	font-size: calc(14px * 1.5);
+	padding: calc(6px * 1.5);
+	margin-left: calc(10px * 1.5);
+}
+
+.zb-full-hd .w-ext-storybook-menu-item .w-ext-storybook-menu-item__option._selected {
+	height: calc(26px * 1.5);
+	border-width: calc(2px * 1.5);
+	line-height: calc(10px * 1.5);
+	padding-left: calc(4px * 1.5);
+}
+
+
+

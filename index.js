@@ -1,34 +1,45 @@
 const path = require('path');
+const {AbstractExtension} = require('zombiebox');
 
 
 /**
- * @implements {IZBAddon}
  */
-class Extension {
+class Extension extends AbstractExtension {
 	/**
-	 * @return {string}
+	 * @override
 	 */
 	getName() {
 		return 'storybook';
 	}
 
 	/**
-	 * @return {string}
+	 * @override
 	 */
-	getPublicDir() {
+	getSourcesDir() {
 		return path.join(__dirname, 'lib');
 	}
 
 	/**
-	 * @return {Object}
+	 * @override
 	 */
 	getConfig() {
+		return {};
+	}
+
+	/**
+	 * @override
+	 */
+	buildCLI(yargs, application) {
+		return undefined;
+	}
+
+	/**
+	 * @override
+	 */
+	generateCode(projectConfig) {
 		return {};
 	}
 }
 
 
-/**
- * @type {IZBAddon}
- */
 module.exports = Extension;
