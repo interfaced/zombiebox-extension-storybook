@@ -1,5 +1,10 @@
 # Change log
 
+## 2.0.1 (14.08.2019)
+
+* Add a welcome message if no stories are configured
+* Update to ESLint 6
+
 ## 2.0.0 (07.06.2019)
 
 * Support ZombieBox 2.0.0

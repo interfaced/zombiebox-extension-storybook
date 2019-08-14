@@ -53,6 +53,17 @@
 	visibility: hidden;
 }
 
+.s-ext-storybook .welcome-message {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -45px;
+	width: 600px;
+	height: 90px;
+	text-align: center;
+}
+
 
 .zb-full-hd .s-ext-storybook .w-ext-storybook-menu {
 	width: calc(350px * 1.5);
