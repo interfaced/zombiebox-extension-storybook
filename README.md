@@ -116,8 +116,7 @@ Each of them can return a promise. With these hooks you can separate a duplicate
 
 ```javascript
 import Helper from 'storybook/helper';
-import StoriesSet from 'storybook/types';
-import {AFTER_TEARDOWN, BEFORE_SETUP} from 'storybook/symbols';
+import StoriesSet, {AFTER_TEARDOWN, BEFORE_SETUP} from 'storybook/types';
 import Button from '../button';
 
 /**

@@ -1,5 +1,11 @@
 # Change log
 
+## 2.1.0 (03.09.2019)
+
+* BREAKING: Hooks were changed from `Symbol`s to simple strings since `Symbol` behavior was unstable when polyfilled.
+
+To migrate import `AFTER_SETUP, AFTER_TEARDOWN, BEFORE_SETUP, BEFORE_TEARDOWN` from `storybook/types` instead of `storybook/symbols`.
+
 ## 2.0.1 (14.08.2019)
 
 * Add a welcome message if no stories are configured
