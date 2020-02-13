@@ -1,5 +1,9 @@
 # Change log
 
+## 2.1.1 (13.02.2020)
+
+* Support ZombieBox 2.6
+
 ## 2.1.0 (03.09.2019)
 
 * BREAKING: Hooks were changed from `Symbol`s to simple strings since `Symbol` behavior was unstable when polyfilled.
